@@ -1,27 +1,301 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
 
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>UWELLC - United Wellness Company</title>
+<title>UWELLC | United Wellness Company</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#0b0b0b;
+color:white;
+}
+
+header{
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:25px 8%;
+position:fixed;
+width:100%;
+background:rgba(0,0,0,.75);
+backdrop-filter:blur(10px);
+z-index:1000;
+
+}
+
+.logo{
+
+font-size:30px;
+font-weight:800;
+letter-spacing:3px;
+color:#ffffff;
+
+}
+
+.logo span{
+
+color:#d4af37;
+
+}
+
+nav a{
+
+color:white;
+text-decoration:none;
+margin-left:35px;
+font-size:16px;
+transition:.3s;
+
+}
+
+nav a:hover{
+
+color:#d4af37;
+
+}
+
+.hero{
+
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:0 10%;
+
+background:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.75));
+
+}
+
+.hero h1{
+
+font-size:70px;
+font-weight:800;
+line-height:1.1;
+
+}
+
+.hero h1 span{
+
+color:#d4af37;
+
+}
+
+.hero p{
+
+margin-top:25px;
+font-size:20px;
+color:#ddd;
+
+}
+
+.btn{
+
+display:inline-block;
+margin-top:40px;
+padding:16px 42px;
+background:#d4af37;
+color:black;
+font-weight:700;
+text-decoration:none;
+border-radius:50px;
+transition:.3s;
+
+}
+
+.btn:hover{
+
+transform:translateY(-5px);
+
+}
+
+.section{
+
+padding:100px 10%;
+
+}
+
+.title{
+
+font-size:42px;
+margin-bottom:50px;
+text-align:center;
+
+}
+
+.cards{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
+
+}
+
+.card{
+
+background:#181818;
+padding:35px;
+border-radius:18px;
+transition:.4s;
+
+}
+
+.card:hover{
+
+transform:translateY(-10px);
+border:1px solid #d4af37;
+
+}
+
+.card h3{
+
+margin-bottom:15px;
+color:#d4af37;
+
+}
+
+footer{
+
+padding:40px;
+text-align:center;
+background:#050505;
+color:#aaa;
+
+}
+
+</style>
 
 </head>
 
-<body style="font-family:Arial;text-align:center;background:#f8f8f8;">
+<body>
 
-<h1>Welcome to UWELLC</h1>
+<header>
 
-<h2>United Wellness Company</h2>
+<div class="logo">
 
-<p>Science Driven Wellness</p>
+UW<span>ELLC</span>
 
-<p>Refresh. Recharge. Reset.</p>
+</div>
+
+<nav>
+
+<a href="#">Home</a>
+
+<a href="#">About</a>
+
+<a href="#">Products</a>
+
+<a href="#">Contact</a>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div>
+
+<h1>
+
+WELCOME TO
+
+<br>
+
+<span>UWELLC</span>
+
+</h1>
+
+<p>
+
+United Wellness Company
+
+<br><br>
+
+Premium Nutraceutical Solutions
+
+</p>
+
+<a href="#" class="btn">
+
+Explore Products
+
+</a>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2 class="title">
+
+Why Choose UWELLC
+
+</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>Premium Quality</h3>
+
+<p>
+
+Scientifically developed formulations made with premium ingredients.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Trusted Brand</h3>
+
+<p>
+
+Committed to quality, innovation and customer satisfaction.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Advanced Research</h3>
+
+<p>
+
+Modern wellness solutions backed by science.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 UWELLC | United Wellness Company
+
+</footer>
 
 </body>
 
-</html
+</html>
