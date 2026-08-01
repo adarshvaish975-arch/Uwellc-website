@@ -1,184 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>UWELLC | United Wellness Company</title>
 
+<link rel="stylesheet" href="style.css">
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Poppins,sans-serif;
-scroll-behavior:smooth;
-}
-
-body{
-background:#0b0b0b;
-color:white;
-}
-
-header{
-
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:25px 8%;
-position:fixed;
-width:100%;
-background:rgba(0,0,0,.75);
-backdrop-filter:blur(10px);
-z-index:1000;
-
-}
-
-.logo{
-
-font-size:30px;
-font-weight:800;
-letter-spacing:3px;
-color:#ffffff;
-
-}
-
-.logo span{
-
-color:#d4af37;
-
-}
-
-nav a{
-
-color:white;
-text-decoration:none;
-margin-left:35px;
-font-size:16px;
-transition:.3s;
-
-}
-
-nav a:hover{
-
-color:#d4af37;
-
-}
-
-.hero{
-
-height:100vh;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-padding:0 10%;
-
-background:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.75));
-
-}
-
-.hero h1{
-
-font-size:70px;
-font-weight:800;
-line-height:1.1;
-
-}
-
-.hero h1 span{
-
-color:#d4af37;
-
-}
-
-.hero p{
-
-margin-top:25px;
-font-size:20px;
-color:#ddd;
-
-}
-
-.btn{
-
-display:inline-block;
-margin-top:40px;
-padding:16px 42px;
-background:#d4af37;
-color:black;
-font-weight:700;
-text-decoration:none;
-border-radius:50px;
-transition:.3s;
-
-}
-
-.btn:hover{
-
-transform:translateY(-5px);
-
-}
-
-.section{
-
-padding:100px 10%;
-
-}
-
-.title{
-
-font-size:42px;
-margin-bottom:50px;
-text-align:center;
-
-}
-
-.cards{
-
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:30px;
-
-}
-
-.card{
-
-background:#181818;
-padding:35px;
-border-radius:18px;
-transition:.4s;
-
-}
-
-.card:hover{
-
-transform:translateY(-10px);
-border:1px solid #d4af37;
-
-}
-
-.card h3{
-
-margin-bottom:15px;
-color:#d4af37;
-
-}
-
-footer{
-
-padding:40px;
-text-align:center;
-background:#050505;
-color:#aaa;
-
-}
-
-</style>
 
 </head>
 
@@ -186,101 +19,243 @@ color:#aaa;
 
 <header>
 
+<div class="container navbar">
+
 <div class="logo">
 
 UW<span>ELLC</span>
 
 </div>
 
-<nav>
+<ul class="menu">
 
-<a href="#">Home</a>
+<li><a href="#home">Home</a></li>
 
-<a href="#">About</a>
+<li><a href="#about">About</a></li>
 
-<a href="#">Products</a>
+<li><a href="#products">Products</a></li>
 
-<a href="#">Contact</a>
+<li><a href="#contact">Contact</a></li>
 
-</nav>
+</ul>
 
-</header>
+<a href="#products" class="btn">
 
-<section class="hero">
-
-<div>
-
-<h1>
-
-WELCOME TO
-
-<br>
-
-<span>UWELLC</span>
-
-</h1>
-
-<p>
-
-United Wellness Company
-
-<br><br>
-
-Premium Nutraceutical Solutions
-
-</p>
-
-<a href="#" class="btn">
-
-Explore Products
+Explore
 
 </a>
 
 </div>
 
+</header>
+
+<section class="hero" id="home">
+
+<div class="container hero-content">
+
+<h1>
+
+Science Driven
+
+<br>
+
+<span>Wellness</span>
+
+</h1>
+
+<p>
+
+Premium Nutraceutical Solutions
+
+for Better Everyday Life.
+
+</p>
+
+<div class="hero-buttons">
+
+<a href="#products" class="btn">
+
+Explore Products
+
+</a>
+
+<a href="#about" class="btn-outline">
+
+About Us
+
+</a>
+
+</div>
+
+</div>
+
 </section>
+<section id="about">
 
-<section class="section">
+<div class="container">
 
-<h2 class="title">
+<h2 class="section-title">
 
-Why Choose UWELLC
+About <span>UWELLC</span>
 
 </h2>
 
-<div class="cards">
+<p class="about-text">
+
+United Wellness Company (UWELLC) is dedicated to developing premium nutraceutical products with science-backed formulations, trusted quality and modern innovation. Our mission is to deliver wellness solutions that improve everyday life through carefully selected ingredients and responsible manufacturing.
+
+</p>
+
+</div>
+
+</section>
+
+<section class="products" id="products">
+
+<div class="container">
+
+<h2 class="section-title">
+
+Our <span>Products</span>
+
+</h2>
+
+<div class="grid">
+
+<div class="product-card">
+
+<div class="product-image">
+
+<img src="images/afterset.png" alt="AfterSet">
+
+</div>
+
+<div class="product-info">
+
+<h3>AFTERSET</h3>
+
+<p>
+
+Premium Lemon Fizz Nutraceutical Sachet designed to support everyday wellness with a refreshing taste.
+
+</p>
+
+<a href="#" class="gold-btn">
+
+Learn More
+
+</a>
+
+</div>
+
+</div>
+
+<div class="product-card">
+
+<div class="product-image">
+
+<img src="images/wheyprime.png" alt="WheyPrime">
+
+</div>
+
+<div class="product-info">
+
+<h3>WheyPrime Syrup</h3>
+
+<p>
+
+Premium nutraceutical syrup formulated with high-quality ingredients to support daily nutritional needs.
+
+</p>
+
+<a href="#" class="gold-btn">
+
+Learn More
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<section class="why">
+
+<div class="container">
+
+<h2 class="section-title">
+
+Why Choose <span>UWELLC</span>
+
+</h2>
+
+<div class="grid">
 
 <div class="card">
 
 <h3>Premium Quality</h3>
 
-<p>
-
-Scientifically developed formulations made with premium ingredients.
-
-</p>
+<p>High-quality nutraceutical formulations manufactured with strict quality standards.</p>
 
 </div>
 
 <div class="card">
 
-<h3>Trusted Brand</h3>
+<h3>Science Backed</h3>
 
-<p>
-
-Committed to quality, innovation and customer satisfaction.
-
-</p>
+<p>Every product is developed with a science-driven approach and carefully selected ingredients.</p>
 
 </div>
 
 <div class="card">
 
-<h3>Advanced Research</h3>
+<h3>Trusted Wellness</h3>
+
+<p>Our goal is to provide reliable products that support healthier everyday living.</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="contact" id="contact">
+
+<div class="container">
+
+<div class="contact-box">
+
+<h2>Contact UWELLC</h2>
 
 <p>
 
-Modern wellness solutions backed by science.
+<strong>Email:</strong> uwellc@yahoo.com
+
+</p>
+
+<p>
+
+<strong>Phone:</strong> +91 9794097269
+
+</p>
+
+<p>
+
+<strong>Address:</strong><br>
+
+CN-106, W-24, G.S. Nagar,<br>
+
+Tehsil Chail,<br>
+
+District Kaushambi,<br>
+
+Uttar Pradesh – 212201, India
 
 </p>
 
@@ -292,7 +267,13 @@ Modern wellness solutions backed by science.
 
 <footer>
 
-© 2026 UWELLC | United Wellness Company
+<h3>UWELLC</h3>
+
+<p>United Wellness Company</p>
+
+<p>Science Driven Wellness</p>
+
+<p>© 2026 UWELLC. All Rights Reserved.</p>
 
 </footer>
 
