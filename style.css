@@ -153,13 +153,19 @@ position:absolute;
 
 top:50%;
 
-left:8%;
+left:50%;
 
-transform:translateY(-50%);
+transform:translateY(-50%,-50%);
 
-max-width:550px;
+ width:90%;
 
+max-width:800px;
+
+ text-align:center;
+ 
 color:#fff;
+ 
+ z-index:10;
 
 }
 
