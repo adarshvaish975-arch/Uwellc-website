@@ -95,6 +95,14 @@ align-items:center;
 gap:42px;
 
 list-style:none;
+ overflow-x:auto;
+ white-space:nowrap;
+ scrollbar-width:none;
+ -webkit-overflow-scrolling:touch;
+}
+
+.nav-links::-webkit-scrollbar{
+ display:none;
 
 }
 
@@ -382,6 +390,7 @@ font-size:18px;
 line-height:1.9;
 
 color:#666;
+}
  
 /*=====================================
 UWELLC PREMIUM CSS V2
@@ -1226,4 +1235,4 @@ width:100%;
 }
 
 }
-}
+
