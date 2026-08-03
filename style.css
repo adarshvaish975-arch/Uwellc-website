@@ -1,7 +1,10 @@
-/* =====================================
-UWELLC PREMIUM CSS
-PART 1A
-===================================== */
+/*=====================================
+UWELLC PREMIUM CSS V2
+PART 1
+GLOBAL • HEADER • HERO
+======================================*/
+
+/*========== RESET ==========*/
 
 *{
 margin:0;
@@ -15,15 +18,18 @@ scroll-behavior:smooth;
 
 body{
 font-family:'Poppins',sans-serif;
-background:#fafafa;
-color:#111;
+background:#ffffff;
+color:#111111;
+line-height:1.7;
 overflow-x:hidden;
-line-height:1.6;
+-webkit-font-smoothing:antialiased;
+text-rendering:optimizeLegibility;
 }
 
 img{
+width:100%;
+height:auto;
 display:block;
-max-width:100%;
 }
 
 a{
@@ -36,7 +42,7 @@ max-width:1400px;
 margin:auto;
 }
 
-/*================ HEADER ================*/
+/*========== HEADER ==========*/
 
 .header{
 
@@ -47,13 +53,17 @@ left:0;
 
 width:100%;
 
-background:rgba(255,255,255,.96);
+height:82px;
+
+background:rgba(255,255,255,.92);
 
 backdrop-filter:blur(18px);
 
-box-shadow:0 10px 30px rgba(0,0,0,.08);
+border-bottom:1px solid rgba(0,0,0,.05);
 
 z-index:9999;
+
+transition:.35s;
 
 }
 
@@ -71,7 +81,8 @@ align-items:center;
 
 .logo img{
 
-height:58px;
+height:56px;
+width:auto;
 
 }
 
@@ -79,9 +90,11 @@ height:58px;
 
 display:flex;
 
-list-style:none;
+align-items:center;
 
-gap:40px;
+gap:42px;
+
+list-style:none;
 
 }
 
@@ -93,57 +106,124 @@ font-weight:600;
 
 color:#111;
 
-transition:.3s;
+position:relative;
+
+transition:.35s;
+
+}
+
+.nav-links a::after{
+
+content:"";
+
+position:absolute;
+
+left:0;
+bottom:-8px;
+
+width:0;
+
+height:2px;
+
+background:#D4AF37;
+
+transition:.35s;
 
 }
 
 .nav-links a:hover{
 
-color:#C9A227;
+color:#D4AF37;
+
+}
+
+.nav-links a:hover::after{
+
+width:100%;
 
 }
 
 .nav-btn{
 
-padding:14px 30px;
+display:inline-flex;
 
-border-radius:50px;
+align-items:center;
+
+justify-content:center;
+
+padding:14px 30px;
 
 background:#111;
 
 color:#fff;
 
-font-weight:600;
+border-radius:50px;
 
-transition:.3s;
+font-size:15px;
+
+font-weight:700;
+
+transition:.35s;
+
+box-shadow:0 10px 25px rgba(0,0,0,.15);
 
 }
 
 .nav-btn:hover{
 
-background:#C9A227;
+background:#D4AF37;
 
 color:#111;
 
+transform:translateY(-3px);
+
 }
 
-/*================ HERO ================*/
+/*========== HERO ==========*/
 
 .hero{
 
-margin-top:82px;
-
 position:relative;
+
+margin-top:82px;
 
 overflow:hidden;
 
 }
 
-.hero-image img{
+.hero-image{
+
+position:relative;
+
+}
+
+.hero-image::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+left:0;
 
 width:100%;
+height:100%;
+
+background:linear-gradient(
+90deg,
+rgba(0,0,0,.60),
+rgba(0,0,0,.18)
+);
+
+z-index:1;
+
+}
+
+.hero-image img{
 
 display:block;
+
+width:100%;
 
 }
 
@@ -153,51 +233,69 @@ position:absolute;
 
 top:50%;
 
-left:50%;
+left:8%;
 
-transform:translateY(-50%,-50%);
+transform:translateY(-50%);
 
- width:90%;
+max-width:580px;
 
-max-width:800px;
+z-index:2;
 
- text-align:center;
- 
 color:#fff;
- 
- z-index:10;
+
+}
+
+.hero-tag{
+
+display:inline-block;
+
+padding:9px 18px;
+
+border-radius:50px;
+
+background:rgba(212,175,55,.18);
+
+border:1px solid rgba(212,175,55,.35);
+
+color:#FFE08A;
+
+font-size:13px;
+
+font-weight:700;
+
+letter-spacing:1px;
+
+margin-bottom:20px;
 
 }
 
 .hero-content h1{
 
-font-size:68px;
+font-size:70px;
+
+line-height:1.08;
 
 font-weight:800;
 
-line-height:1.1;
-
-margin-bottom:25px;
-
-text-shadow:0 10px 25px rgba(0,0,0,.4);
+margin-bottom:22px;
 
 }
 
-.hero-content span{
+.hero-content h1 span{
 
-color:#d4af37;
+color:#D4AF37;
 
 }
 
 .hero-content p{
 
-font-size:20px;
+font-size:19px;
 
 line-height:1.9;
 
-margin-bottom:35px;
+color:#f2f2f2;
 
-text-shadow:0 4px 12px rgba(0,0,0,.35);
+margin-bottom:35px;
 
 }
 
@@ -205,120 +303,33 @@ text-shadow:0 4px 12px rgba(0,0,0,.35);
 
 display:inline-block;
 
-padding:16px 38px;
+padding:18px 42px;
 
-background:#d4af37;
+border-radius:50px;
+
+background:#D4AF37;
 
 color:#111;
 
-border-radius:60px;
+font-size:16px;
 
 font-weight:700;
 
 transition:.35s;
+
+box-shadow:0 18px 45px rgba(212,175,55,.35);
 
 }
 
 .hero-btn:hover{
 
-background:#111;
+background:#fff;
 
-color:#fff;
-
-transform:translateY(-3px);
-/*=====================================
-ABOUT SECTION
-======================================*/
-
-.about{
-
-padding:110px 0;
-
-background:#ffffff;
+transform:translateY(-4px);
 
 }
 
-.about{
-
-display:grid;
-
-grid-template-columns:1fr 1fr;
-
-align-items:center;
-
-gap:70px;
-
-width:92%;
-
-max-width:1400px;
-
-margin:auto;
-
-}
-
-.about-left img{
-
-width:100%;
-
-border-radius:28px;
-
-box-shadow:0 25px 60px rgba(0,0,0,.12);
-
-}
-
-.about-right h2{
-
-font-size:48px;
-
-font-weight:800;
-
-margin-bottom:25px;
-
-color:#111;
-
-}
-
-.about-right p{
-
-font-size:18px;
-
-line-height:2;
-
-color:#555;
-
-margin-bottom:35px;
-
-}
-
-.about-btn{
-
-display:inline-block;
-
-padding:15px 36px;
-
-border-radius:50px;
-
-background:#111;
-
-color:#fff;
-
-font-weight:700;
-
-transition:.35s;
-
-}
-
-.about-btn:hover{
-
-background:#d4af37;
-
-color:#111;
-
-}
-
-/*=====================================
-SECTION HEADING
-======================================*/
+/*========== COMMON HEADING ==========*/
 
 .section-heading{
 
@@ -332,13 +343,15 @@ margin-bottom:70px;
 
 display:inline-block;
 
-font-size:15px;
+font-size:14px;
 
 font-weight:700;
 
 letter-spacing:3px;
 
-color:#d4af37;
+text-transform:uppercase;
+
+color:#D4AF37;
 
 margin-bottom:15px;
 
@@ -350,9 +363,11 @@ font-size:52px;
 
 font-weight:800;
 
-margin-bottom:18px;
+line-height:1.2;
 
 color:#111;
+
+margin-bottom:18px;
 
 }
 
@@ -367,292 +382,107 @@ font-size:18px;
 line-height:1.9;
 
 color:#666;
-
-}
-
+ 
 /*=====================================
-COMMON IMAGE BANNERS
+UWELLC PREMIUM CSS V2
+PART 2
+ABOUT • BRAND • PRODUCTS
 ======================================*/
 
-.brand-banner,
-.benefit-banner,
-.packaging-banner,
-.categories-banner,
-.whey-banner,
-.how-banner,
-.testimonial-banner,
-.icon-banner,
-.icon-library,
-.contact-banner,
-.footer-banner{
-
-width:92%;
-
-max-width:1400px;
-
-margin:70px auto;
-
-}
-
-.brand-banner img,
-.benefit-banner img,
-.packaging-banner img,
-.categories-banner img,
-.whey-banner img,
-.how-banner img,
-.testimonial-banner img,
-.icon-banner img,
-.icon-library img,
-.contact-banner img,
-.footer-banner img{
-
-width:100%;
-
-display:block;
-
-border-radius:26px;
-
-box-shadow:0 20px 60px rgba(0,0,0,.10);
-
-transition:.4s;
-
-}
-
-.brand-banner img:hover,
-.benefit-banner img:hover,
-.packaging-banner img:hover,
-.categories-banner img:hover,
-.whey-banner img:hover,
-.how-banner img:hover,
-.testimonial-banner img:hover,
-.icon-banner img:hover,
-.icon-library img:hover,
-.contact-banner img:hover{
-
-transform:translateY(-6px);
-
-box-shadow:0 30px 70px rgba(0,0,0,.18);
-
-}
- /*=====================================
-ABOUT SECTION
-======================================*/
-
-.about{
-
-padding:110px 0;
-
-background:#ffffff;
-
-}
-
-.about{
-
-display:grid;
-
-grid-template-columns:1fr 1fr;
-
-align-items:center;
-
-gap:70px;
-
-width:92%;
-
-max-width:1400px;
-
-margin:auto;
-
-}
-
-.about-left img{
-
-width:100%;
-
-border-radius:28px;
-
-box-shadow:0 25px 60px rgba(0,0,0,.12);
-
-}
-
-.about-right h2{
-
-font-size:48px;
-
-font-weight:800;
-
-margin-bottom:25px;
-
-color:#111;
-
-}
-
-.about-right p{
-
-font-size:18px;
-
-line-height:2;
-
-color:#555;
-
-margin-bottom:35px;
-
-}
-
-.about-btn{
-
-display:inline-block;
-
-padding:15px 36px;
-
-border-radius:50px;
-
-background:#111;
-
-color:#fff;
-
-font-weight:700;
-
-transition:.35s;
-
-}
-
-.about-btn:hover{
-
-background:#d4af37;
-
-color:#111;
-
-}
-
-/*=====================================
-SECTION HEADING
-======================================*/
-
-.section-heading{
-
-text-align:center;
-
-margin-bottom:70px;
-
-}
-
-.section-heading span{
-
-display:inline-block;
-
-font-size:15px;
-
-font-weight:700;
-
-letter-spacing:3px;
-
-color:#d4af37;
-
-margin-bottom:15px;
-
-}
-
-.section-heading h2{
-
-font-size:52px;
-
-font-weight:800;
-
-margin-bottom:18px;
-
-color:#111;
-
-}
-
-.section-heading p{
-
-max-width:760px;
-
-margin:auto;
-
-font-size:18px;
-
-line-height:1.9;
-
-color:#666;
-
-}
-
-/*=====================================
-COMMON IMAGE BANNERS
-======================================*/
-
-.brand-banner,
-.benefit-banner,
-.packaging-banner,
-.categories-banner,
-.whey-banner,
-.how-banner,
-.testimonial-banner,
-.icon-banner,
-.icon-library,
-.contact-banner,
-.footer-banner{
-
-width:92%;
-
-max-width:1400px;
-
-margin:70px auto;
-
-}
-
-.brand-banner img,
-.benefit-banner img,
-.packaging-banner img,
-.categories-banner img,
-.whey-banner img,
-.how-banner img,
-.testimonial-banner img,
-.icon-banner img,
-.icon-library img,
-.contact-banner img,
-.footer-banner img{
-
-width:100%;
-
-display:block;
-
-border-radius:26px;
-
-box-shadow:0 20px 60px rgba(0,0,0,.10);
-
-transition:.4s;
-
-}
-
-.brand-banner img:hover,
-.benefit-banner img:hover,
-.packaging-banner img:hover,
-.categories-banner img:hover,
-.whey-banner img:hover,
-.how-banner img:hover,
-.testimonial-banner img:hover,
-.icon-banner img:hover,
-.icon-library img:hover,
-.contact-banner img:hover{
-
-transform:translateY(-6px);
-
-box-shadow:0 30px 70px rgba(0,0,0,.18);
-
-}  
- /*=====================================
-WHY CHOOSE UWELLC
-======================================*/
-
-.why-uwellc{
+/*========== SECTION SPACING ==========*/
+
+.about,
+.brand-section,
+.why-uwellc,
+.products-section{
 
 padding:120px 0;
 
+}
+
+.about{
+
 background:#ffffff;
 
 }
+
+.brand-section{
+
+background:#f8f9fb;
+
+}
+
+.why-uwellc{
+
+background:#ffffff;
+
+}
+
+.products-section{
+
+background:#f8f9fb;
+
+}
+
+/*========== ABOUT IMAGE ==========*/
+
+.about-left{
+
+width:92%;
+
+max-width:1400px;
+
+margin:auto;
+
+}
+
+.about-left img{
+
+border-radius:28px;
+
+box-shadow:0 25px 70px rgba(0,0,0,.12);
+
+transition:.45s;
+
+}
+
+.about-left img:hover{
+
+transform:translateY(-8px);
+
+box-shadow:0 35px 85px rgba(0,0,0,.18);
+
+}
+
+/*========== BRAND BANNER ==========*/
+
+.brand-banner{
+
+width:92%;
+
+max-width:1400px;
+
+margin:auto;
+
+}
+
+.brand-banner img{
+
+border-radius:28px;
+
+box-shadow:0 25px 70px rgba(0,0,0,.12);
+
+transition:.45s;
+
+}
+
+.brand-banner img:hover{
+
+transform:translateY(-8px);
+
+}
+
+/*========== WHY CHOOSE ==========*/
 
 .benefit-banner{
 
@@ -660,25 +490,218 @@ width:92%;
 
 max-width:1400px;
 
-margin:60px auto;
+margin:auto;
 
 }
 
 .benefit-banner img{
 
-width:100%;
-
 border-radius:28px;
-
-display:block;
 
 box-shadow:0 25px 70px rgba(0,0,0,.12);
 
+transition:.45s;
+
 }
 
-/*=====================================
-PACKAGING
+.benefit-banner img:hover{
+
+transform:translateY(-8px);
+
+}
+
+/*========== AFTERSET SHOWCASE ==========*/
+
+.afterset-showcase{
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:35px;
+
+width:92%;
+
+max-width:1400px;
+
+margin:60px auto 90px;
+
+}
+
+.afterset-box,
+.afterset-sachet{
+
+background:#fff;
+
+border-radius:30px;
+
+padding:20px;
+
+box-shadow:0 20px 55px rgba(0,0,0,.08);
+
+transition:.4s;
+
+}
+
+.afterset-box:hover,
+.afterset-sachet:hover{
+
+transform:translateY(-8px);
+
+box-shadow:0 35px 80px rgba(0,0,0,.15);
+
+}
+
+.afterset-box img,
+.afterset-sachet img{
+
+border-radius:20px;
+
+}
+
+/*========== PRODUCT CATEGORIES ==========*/
+
+.categories-banner{
+
+width:92%;
+
+max-width:1400px;
+
+margin:70px auto;
+
+}
+
+.categories-banner img{
+
+border-radius:28px;
+
+box-shadow:0 25px 70px rgba(0,0,0,.12);
+
+transition:.45s;
+
+}
+
+.categories-banner img:hover{
+
+transform:translateY(-8px);
+
+}
+
+/*========== PRODUCT COLLECTION ==========*/
+
+.collection-banner{
+
+width:92%;
+
+max-width:1400px;
+
+margin:70px auto;
+
+}
+
+.collection-banner img{
+
+border-radius:28px;
+
+box-shadow:0 25px 70px rgba(0,0,0,.12);
+
+transition:.45s;
+
+}
+
+.collection-banner img:hover{
+
+transform:translateY(-8px);
+
+}
+
+/*========== WHEY PRIME ==========*/
+
+.whey-banner{
+
+width:92%;
+
+max-width:1400px;
+
+margin:70px auto 40px;
+
+}
+
+.whey-bottle{
+
+width:70%;
+
+max-width:800px;
+
+margin:0 auto;
+
+}
+
+.whey-banner img,
+.whey-bottle img{
+
+border-radius:28px;
+
+box-shadow:0 25px 70px rgba(0,0,0,.12);
+
+transition:.45s;
+
+}
+
+.whey-banner img:hover,
+.whey-bottle img:hover{
+
+transform:translateY(-8px);
+
+box-shadow:0 35px 80px rgba(0,0,0,.18);
+
+}
+ /*=====================================
+UWELLC PREMIUM CSS V2
+PART 3
+HOW TO USE • PACKAGING •
+TESTIMONIALS • CONTACT • ICONS
 ======================================*/
+
+/*========== HOW TO USE ==========*/
+
+.how-use-section{
+
+padding:120px 0;
+
+background:#ffffff;
+
+}
+
+.how-banner{
+
+width:92%;
+
+max-width:1400px;
+
+margin:auto;
+
+}
+
+.how-banner img{
+
+border-radius:28px;
+
+box-shadow:0 25px 70px rgba(0,0,0,.12);
+
+transition:.45s;
+
+}
+
+.how-banner img:hover{
+
+transform:translateY(-8px);
+
+box-shadow:0 35px 85px rgba(0,0,0,.18);
+
+}
+
+/*========== PACKAGING ==========*/
 
 .packaging-section{
 
@@ -700,150 +723,29 @@ margin:auto;
 
 .packaging-banner img{
 
-width:100%;
-
-display:block;
-
 border-radius:28px;
 
 box-shadow:0 25px 70px rgba(0,0,0,.12);
 
-}
-
-/*=====================================
-PRODUCT CATEGORIES
-======================================*/
-
-.categories-section{
-
-padding:120px 0;
-
-background:#fff;
+transition:.45s;
 
 }
 
-.categories-banner{
+.packaging-banner img:hover{
 
-width:92%;
+transform:translateY(-8px);
 
-max-width:1400px;
-
-margin:auto;
+box-shadow:0 35px 85px rgba(0,0,0,.18);
 
 }
 
-.categories-banner img{
+/*========== TESTIMONIALS ==========*/
 
-width:100%;
-
-display:block;
-
-border-radius:28px;
-
-box-shadow:0 25px 70px rgba(0,0,0,.12);
-
-}
-
-/*=====================================
-WHEY PRIME
-======================================*/
-
-.whey-section{
-
-padding:120px 0;
-
-background:#f7f8fb;
-
-}
-
-.whey-banner{
-
-width:92%;
-
-max-width:1400px;
-
-margin:auto;
-
-}
-
-.whey-banner img{
-
-width:100%;
-
-display:block;
-
-border-radius:28px;
-
-box-shadow:0 25px 70px rgba(0,0,0,.12);
-
-}
-
-/*=====================================
-HOW TO USE
-======================================*/
-
-.how-use{
+.testimonials-section{
 
 padding:120px 0;
 
 background:#ffffff;
-
-}
-
-.how-banner{
-
-width:92%;
-
-max-width:1400px;
-
-margin:auto;
-
-}
-
-.how-banner img{
-
-width:100%;
-
-display:block;
-
-border-radius:28px;
-
-box-shadow:0 25px 70px rgba(0,0,0,.12);
-
-}
-
-/* Common hover */
-
-.benefit-banner img,
-.packaging-banner img,
-.categories-banner img,
-.whey-banner img,
-.how-banner img{
-
-transition:.45s ease;
-
-}
-
-.benefit-banner img:hover,
-.packaging-banner img:hover,
-.categories-banner img:hover,
-.whey-banner img:hover,
-.how-banner img:hover{
-
-transform:translateY(-8px);
-
-box-shadow:0 35px 80px rgba(0,0,0,.18);
-
-}
-  /*=====================================
-TESTIMONIALS
-======================================*/
-
-.testimonials{
-
-padding:120px 0;
-
-background:#f7f8fb;
 
 }
 
@@ -859,10 +761,6 @@ margin:auto;
 
 .testimonial-banner img{
 
-width:100%;
-
-display:block;
-
 border-radius:28px;
 
 box-shadow:0 25px 70px rgba(0,0,0,.12);
@@ -875,66 +773,17 @@ transition:.45s;
 
 transform:translateY(-8px);
 
-box-shadow:0 35px 80px rgba(0,0,0,.18);
+box-shadow:0 35px 85px rgba(0,0,0,.18);
 
 }
 
-/*=====================================
-ICON SECTION
-======================================*/
-
-.icon-section{
-
-padding:120px 0;
-
-background:#ffffff;
-
-}
-
-.icon-banner,
-.icon-library{
-
-width:92%;
-
-max-width:1400px;
-
-margin:50px auto;
-
-}
-
-.icon-banner img,
-.icon-library img{
-
-width:100%;
-
-display:block;
-
-border-radius:28px;
-
-box-shadow:0 25px 70px rgba(0,0,0,.12);
-
-transition:.45s;
-
-}
-
-.icon-banner img:hover,
-.icon-library img:hover{
-
-transform:translateY(-8px);
-
-box-shadow:0 35px 80px rgba(0,0,0,.18);
-
-}
-
-/*=====================================
-CONTACT
-======================================*/
+/*========== CONTACT ==========*/
 
 .contact-section{
 
 padding:120px 0;
 
-background:#f7f8fb;
+background:#f8f9fb;
 
 }
 
@@ -950,10 +799,6 @@ margin:auto;
 
 .contact-banner img{
 
-width:100%;
-
-display:block;
-
 border-radius:28px;
 
 box-shadow:0 25px 70px rgba(0,0,0,.12);
@@ -966,64 +811,23 @@ transition:.45s;
 
 transform:translateY(-8px);
 
-box-shadow:0 35px 80px rgba(0,0,0,.18);
-
-}
-  /*=====================================
-FOOTER
-======================================*/
-
-footer{
-
-background:#0d0d0d;
-
-padding:90px 0 40px;
-
-color:#ffffff;
-
-text-align:center;
+box-shadow:0 35px 85px rgba(0,0,0,.18);
 
 }
 
-.footer-top{
+/*========== ICON SECTION ==========*/
 
-margin-bottom:50px;
+.icon-section{
 
-}
+padding:120px 0;
 
-.footer-logo{
-
-width:170px;
-
-margin:0 auto 25px;
-
-display:block;
+background:#ffffff;
 
 }
 
-.footer-top h2{
+.icon-banner,
 
-font-size:42px;
-
-font-weight:800;
-
-margin-bottom:10px;
-
-letter-spacing:2px;
-
-}
-
-.footer-top p{
-
-font-size:17px;
-
-color:#cfcfcf;
-
-line-height:1.8;
-
-}
-
-.footer-banner{
+.icon-library{
 
 width:92%;
 
@@ -1033,15 +837,138 @@ margin:60px auto;
 
 }
 
+.icon-banner img,
+
+.icon-library img{
+
+border-radius:28px;
+
+box-shadow:0 25px 70px rgba(0,0,0,.12);
+
+transition:.45s;
+
+}
+
+.icon-banner img:hover,
+
+.icon-library img:hover{
+
+transform:translateY(-8px);
+
+box-shadow:0 35px 85px rgba(0,0,0,.18);
+
+}
+
+/*========== PREMIUM IMAGE EFFECT ==========*/
+
+.brand-banner img,
+
+.benefit-banner img,
+
+.afterset-box img,
+
+.afterset-sachet img,
+
+.categories-banner img,
+
+.collection-banner img,
+
+.whey-banner img,
+
+.whey-bottle img,
+
+.how-banner img,
+
+.packaging-banner img,
+
+.testimonial-banner img,
+
+.contact-banner img,
+
+.icon-banner img,
+
+.icon-library img,
+
 .footer-banner img{
 
-width:100%;
+cursor:pointer;
 
-display:block;
+transition:
+transform .45s ease,
+box-shadow .45s ease;
 
-border-radius:26px;
+}
+ /*=====================================
+UWELLC PREMIUM CSS V2
+PART 4
+FOOTER • ANIMATION • RESPONSIVE
+======================================*/
 
-box-shadow:0 20px 60px rgba(0,0,0,.25);
+/*========== FOOTER BANNER ==========*/
+
+.footer-banner-section{
+padding:80px 0 0;
+background:#ffffff;
+}
+
+.footer-banner{
+width:92%;
+max-width:1400px;
+margin:auto;
+}
+
+.footer-banner img{
+border-radius:28px;
+box-shadow:0 25px 70px rgba(0,0,0,.12);
+transition:.45s;
+}
+
+.footer-banner img:hover{
+transform:translateY(-8px);
+box-shadow:0 35px 85px rgba(0,0,0,.18);
+}
+
+/*========== FOOTER ==========*/
+
+footer{
+
+background:linear-gradient(180deg,#101010,#050505);
+
+color:#fff;
+
+padding:90px 0 35px;
+
+text-align:center;
+
+}
+
+.footer-logo{
+
+width:150px;
+
+margin:0 auto 25px;
+
+}
+
+.footer-top h2{
+
+font-size:42px;
+
+font-weight:800;
+
+margin-bottom:12px;
+
+}
+
+.footer-top p{
+
+font-size:17px;
+
+line-height:1.9;
+
+color:#d4d4d4;
+
+margin-bottom:10px;
 
 }
 
@@ -1053,7 +980,7 @@ justify-content:center;
 
 align-items:center;
 
-gap:40px;
+gap:42px;
 
 flex-wrap:wrap;
 
@@ -1063,7 +990,7 @@ margin:45px 0;
 
 .footer-links a{
 
-color:#ffffff;
+color:#fff;
 
 font-size:17px;
 
@@ -1075,71 +1002,72 @@ transition:.35s;
 
 .footer-links a:hover{
 
-color:#d4af37;
+color:#D4AF37;
 
 }
 
 .footer-bottom{
 
+margin-top:35px;
+
 padding-top:25px;
 
-border-top:1px solid rgba(255,255,255,.15);
-
-color:#aaa;
+border-top:1px solid rgba(255,255,255,.12);
 
 font-size:15px;
 
-}
-
-/*=====================================
-GLOBAL ANIMATION
-======================================*/
-
-.hero,
-.about,
-.featured-products,
-.why-uwellc,
-.packaging-section,
-.categories-section,
-.whey-section,
-.how-use,
-.testimonials,
-.icon-section,
-.contact-section{
-
-animation:fadeUp .9s ease;
+color:#bdbdbd;
 
 }
+
+/*========== FADE ANIMATION ==========*/
 
 @keyframes fadeUp{
 
 0%{
-
 opacity:0;
-
 transform:translateY(45px);
-
 }
 
 100%{
-
 opacity:1;
-
 transform:translateY(0);
-
 }
 
 }
 
-/*=====================================
-RESPONSIVE
-======================================*/
+.hero,
+.about,
+.brand-section,
+.why-uwellc,
+.products-section,
+.how-use-section,
+.packaging-section,
+.testimonials-section,
+.contact-section,
+.icon-section,
+.footer-banner-section{
+
+animation:fadeUp .8s ease;
+
+}
+
+/*========== SMOOTH EFFECT ==========*/
+
+.hero-btn,
+.nav-btn,
+img,
+.footer-links a{
+
+transition:all .35s ease;
+
+}
+
+/*========== RESPONSIVE ==========*/
 
 @media(max-width:1100px){
 
 .hero-content{
-
-left:6%;
 
 max-width:480px;
 
@@ -1151,17 +1079,17 @@ font-size:52px;
 
 }
 
-.products-grid{
-
-grid-template-columns:1fr 1fr;
-
-}
-
-.about{
+.afterset-showcase{
 
 grid-template-columns:1fr;
 
-text-align:center;
+gap:25px;
+
+}
+
+.whey-bottle{
+
+width:90%;
 
 }
 
@@ -1169,13 +1097,19 @@ text-align:center;
 
 @media(max-width:768px){
 
+.header{
+
+position:relative;
+
+}
+
 .navbar{
 
 flex-direction:column;
 
 height:auto;
 
-padding:20px 0;
+padding:18px 0;
 
 }
 
@@ -1199,41 +1133,43 @@ display:none;
 
 .hero{
 
-margin-top:120px;
+margin-top:0;
 
 }
 
 .hero-content{
 
-position:static;
+position:absolute;
+
+left:20px;
+
+right:20px;
+
+bottom:25px;
+
+top:auto;
 
 transform:none;
 
 max-width:100%;
 
-background:#111;
-
-padding:35px 25px;
-
-text-align:center;
-
 }
 
 .hero-content h1{
 
-font-size:36px;
+font-size:34px;
 
 }
 
 .hero-content p{
 
-font-size:16px;
+font-size:15px;
 
 }
 
-.products-grid{
+.section-heading{
 
-grid-template-columns:1fr;
+margin-bottom:45px;
 
 }
 
@@ -1243,9 +1179,9 @@ font-size:34px;
 
 }
 
-.about-right h2{
+.section-heading p{
 
-font-size:34px;
+font-size:16px;
 
 }
 
@@ -1263,5 +1199,31 @@ width:120px;
 
 }
 
-} 
+.about,
+.brand-section,
+.why-uwellc,
+.products-section,
+.how-use-section,
+.packaging-section,
+.testimonials-section,
+.contact-section,
+.icon-section{
+
+padding:80px 0;
+
+}
+
+.afterset-showcase{
+
+grid-template-columns:1fr;
+
+}
+
+.whey-bottle{
+
+width:100%;
+
+}
+
+}
 }
